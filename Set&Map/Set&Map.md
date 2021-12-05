@@ -51,12 +51,47 @@ setTimeout(() => {
 
 
 
+### Map
+
+> Js的对象本质上是键值对的集合，但是传统上只能用字符串当作键，这带来了很大的限制。
+
++ set
++ get
++ has
++ delete
++ size
++ keys
++ values
++ entries
++ forEach
 
 
-https://es6.ruanyifeng.com/#docs/set-map
 
-
+Map构造函数接受数组作为参数，实际上执行的是下面的算法
 
 ```javascript
-global.gc()
+const items = [
+  [
+    'name': 'wave'
+  ]
+]
+
+const map = new Map()
+
+items.forEach(([key, value]) => map.set(key, value))
 ```
+
+事实上，不仅仅是数组，任何具有`Iterator`接口、且每个成员都是一个双元素的数组的数据结构都可以当作Map构造函数的参数。
+
+
+
+Map转为数组结构，比较快速的方法是使用拓展运算符，转为二维数组。
+
+
+
+
+
+
+
+
+
